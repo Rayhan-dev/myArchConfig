@@ -1,0 +1,118 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background-color: #2E3440; /* nord0 */
+    color: #81A1C1; /* nord9 */
+
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+button {
+    border: none;
+    border-radius: 0;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    color: #81A1C1; /* nord3 */
+}
+
+#workspaces button.active {
+    background-color: #434C5E; /* nord2 */
+    color: #88C0D0; /* nord8 */
+}
+
+#workspaces button.urgent {
+    color: #BF616A; /* nord11 (only Aurora) */
+}
+
+/* Common modules */
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#tray {
+    padding: 0 8px;
+    background-color: #3B4252; /* nord1 */
+    margin: 0 2px;
+}
+
+/* Frost accents */
+#clock {
+    color: #88C0D0; /* nord8 */
+}
+
+#cpu {
+    color: #8FBCBB; /* nord7 */
+}
+
+#memory {
+    color: #81A1C1; /* nord9 */
+}
+
+#network {
+    color: #88C0D0; /* nord8 */
+}
+
+#network.disconnected {
+    color: #BF616A; /* nord11 */
+}
+
+#pulseaudio {
+    color: #88C0D0; /* nord15 */
+}
+
+#pulseaudio.muted {
+    color: #4C566A; /* nord3 */
+}
+
+#temperature {
+    color: #88C0D0; /* nord8 */
+}
+
+#temperature.critical {
+    color: #BF616A; /* nord11 */
+}
+
+#battery {
+    color: #8FBCBB; /* nord7 */
+}
+
+#battery.charging {
+    color: #8FBCBB; /* nord7 */
+}
+
+#battery.critical:not(.charging) {
+    color: #BF616A; /* nord11 */
+    animation: blink 1s infinite;
+}
+
+#tray {
+    color: #81A1C1; /* nord9 */
+}
+
+#idle_inhibitor {
+    background-color: #3B4252; /* nord1 */
+    color: #88C0D0; /* nord8 */
+}
+
+#idle_inhibitor.activated {
+    background-color: #88C0D0; /* nord8 */
+    color: #2E3440; /* nord0 */
+}
+
+@keyframes blink {
+    to { background-color: #BF616A; color: #ECEFF4; } /* nord11 + nord6 */
+}
